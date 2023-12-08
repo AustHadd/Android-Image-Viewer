@@ -22,12 +22,9 @@ class MainActivity : AppCompatActivity() {
         val imageView = findViewById<ImageView>(R.id.imageView)
         var index = 0
 
-        var fadeDuration = 500
-
         val fade_in = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         val fade_out = AnimationUtils.loadAnimation(this, R.anim.fade_out)
 
-        var fadein = ObjectAnimator()
         findViewById<Button>(R.id.button_left)
             .setOnClickListener{
                 Log.d("BUTTONS", "User clicked left button")
