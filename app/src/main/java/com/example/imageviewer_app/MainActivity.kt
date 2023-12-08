@@ -25,6 +25,15 @@ class MainActivity : AppCompatActivity() {
         val fade_in = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         val fade_out = AnimationUtils.loadAnimation(this, R.anim.fade_out)
 
+        findViewById<Button>(R.id.button_middle)
+            .setOnClickListener{
+                Log.d("BUTTONS", "User clicked middle button")
+
+                imageView.startAnimation(fade_out)
+                imageView.setImageResource(R.drawable.moose)
+                imageView.startAnimation(fade_in)
+            }
+
         findViewById<Button>(R.id.button_left)
             .setOnClickListener{
                 Log.d("BUTTONS", "User clicked left button")
